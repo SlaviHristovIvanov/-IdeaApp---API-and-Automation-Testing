@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "9c211d76-55d2-43de-aa64-ac788d645145",
+		"name": "ideaApp2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34256637"
+	},
+	"item": [
+		{
+			"name": "/api/User/Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user1234@gmail.com\",\n    \"password\": \"user1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Authentication",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Idea/Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJiZmQwOWVjNy1iMTA1LTQxMzEtYTJkNS00ZDExYjkwN2VkOWEiLCJpYXQiOiIxMi8wNS8yMDI0IDEzOjAwOjE3IiwiVXNlcklkIjoiYzllZWZiYzgtYjFhMi00MzNmLTZlNDYtMDhkY2ZkYTEzYzFmIiwiRW1haWwiOiJ1c2VyMTIzNEBnbWFpbC5jb20iLCJVc2VyTmFtZSI6InVzZXIxMjM0ODgiLCJleHAiOjE3MzM0MjUyMTcsImlzcyI6IklkZWFDZW50ZXJfQXBwX1NvZnRVbmkiLCJhdWQiOiJJZGVhQ2VudGVyX1dlYkFQSV9Tb2Z0VW5pIn0.mL9KZ4a63TB0ZpDBK-_GHCTrcaAWjEuJvbyyGBTQA7A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"My first idea\",\n    \"description\": \"Idea's ideal for all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Create",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Idea/All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJiZmQwOWVjNy1iMTA1LTQxMzEtYTJkNS00ZDExYjkwN2VkOWEiLCJpYXQiOiIxMi8wNS8yMDI0IDEzOjAwOjE3IiwiVXNlcklkIjoiYzllZWZiYzgtYjFhMi00MzNmLTZlNDYtMDhkY2ZkYTEzYzFmIiwiRW1haWwiOiJ1c2VyMTIzNEBnbWFpbC5jb20iLCJVc2VyTmFtZSI6InVzZXIxMjM0ODgiLCJleHAiOjE3MzM0MjUyMTcsImlzcyI6IklkZWFDZW50ZXJfQXBwX1NvZnRVbmkiLCJhdWQiOiJJZGVhQ2VudGVyX1dlYkFQSV9Tb2Z0VW5pIn0.mL9KZ4a63TB0ZpDBK-_GHCTrcaAWjEuJvbyyGBTQA7A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/All",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Idea/Edit?ideaId=ca4e2307-810d-4b37-3fba-08dcfd11d07c",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJiZmQwOWVjNy1iMTA1LTQxMzEtYTJkNS00ZDExYjkwN2VkOWEiLCJpYXQiOiIxMi8wNS8yMDI0IDEzOjAwOjE3IiwiVXNlcklkIjoiYzllZWZiYzgtYjFhMi00MzNmLTZlNDYtMDhkY2ZkYTEzYzFmIiwiRW1haWwiOiJ1c2VyMTIzNEBnbWFpbC5jb20iLCJVc2VyTmFtZSI6InVzZXIxMjM0ODgiLCJleHAiOjE3MzM0MjUyMTcsImlzcyI6IklkZWFDZW50ZXJfQXBwX1NvZnRVbmkiLCJhdWQiOiJJZGVhQ2VudGVyX1dlYkFQSV9Tb2Z0VW5pIn0.mL9KZ4a63TB0ZpDBK-_GHCTrcaAWjEuJvbyyGBTQA7A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Edit title\",\n    \"description\": \"Edit Idea's ideal for all\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Edit?ideaId=ca4e2307-810d-4b37-3fba-08dcfd11d07c",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "ideaId",
+							"value": "ca4e2307-810d-4b37-3fba-08dcfd11d07c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/Idea/Delete?ideaId=221e7629-93cd-4f5c-3fb9-08dcfd11d07c",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJiZmQwOWVjNy1iMTA1LTQxMzEtYTJkNS00ZDExYjkwN2VkOWEiLCJpYXQiOiIxMi8wNS8yMDI0IDEzOjAwOjE3IiwiVXNlcklkIjoiYzllZWZiYzgtYjFhMi00MzNmLTZlNDYtMDhkY2ZkYTEzYzFmIiwiRW1haWwiOiJ1c2VyMTIzNEBnbWFpbC5jb20iLCJVc2VyTmFtZSI6InVzZXIxMjM0ODgiLCJleHAiOjE3MzM0MjUyMTcsImlzcyI6IklkZWFDZW50ZXJfQXBwX1NvZnRVbmkiLCJhdWQiOiJJZGVhQ2VudGVyX1dlYkFQSV9Tb2Z0VW5pIn0.mL9KZ4a63TB0ZpDBK-_GHCTrcaAWjEuJvbyyGBTQA7A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Delete?ideaId=221e7629-93cd-4f5c-3fb9-08dcfd11d07c",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "ideaId",
+							"value": "221e7629-93cd-4f5c-3fb9-08dcfd11d07c"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
